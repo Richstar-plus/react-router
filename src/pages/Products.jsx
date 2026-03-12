@@ -1,4 +1,12 @@
 import { Link } from "react-router-dom";
+import styles from "../MainNavigation.module.css";
+
+
+const PRODUCTS = [
+  { id: "p1", name: "Product 1" },
+  { id: "p2", name: "Product 2" },
+  { id: "p3", name: "Product 3" },
+];
 
 export function ProductsPage() {
   return (
@@ -6,9 +14,11 @@ export function ProductsPage() {
       <div> Products Page</div>
 
       <ul>
-        <li>product 1</li>
-        <li>product 2</li>
-        <li>product 3</li>
+        {PRODUCTS.map((product) => (
+          <li key={product.id} className={styles.list}>
+            <Link to={`/products/${product.id}`}>{product.name}</Link>
+          </li>
+        ))}
       </ul>
     </>
   );
