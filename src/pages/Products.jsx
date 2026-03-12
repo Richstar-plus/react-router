@@ -4,7 +4,12 @@ export function ProductsPage() {
   return (
     <>
       <div> Products Page</div>
-      <p>Back to <Link to="/">Home</Link></p>
+
+      <ul>
+        <li>product 1</li>
+        <li>product 2</li>
+        <li>product 3</li>
+      </ul>
     </>
   );
 }
