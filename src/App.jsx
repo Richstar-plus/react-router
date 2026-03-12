@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/Home";
-import { ProductsPage } from "./pages/products";
+import { ProductsPage } from "./pages/Products";
 import { RootLayout } from "./pages/Root";
 import { Error } from "./pages/Error";
 import { ProductDetailsPage } from "./pages/ProductDetails";
@@ -12,15 +12,15 @@ const router = createBrowserRouter([
     errorElement: <Error/>,
     children: [
       {
-        path: "/",
+        path: "",
         element: <HomePage />,
       },
       {
-        path: "/products",
+        path: "products",
         element: <ProductsPage />,
       },
       {
-        path: "/products/:productId",
+        path: "products/:productId",
         element: <ProductDetailsPage />,
       },
     ],

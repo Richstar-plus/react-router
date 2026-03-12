@@ -16,7 +16,7 @@ export function ProductsPage() {
       <ul>
         {PRODUCTS.map((product) => (
           <li key={product.id} className={styles.list}>
-            <Link to={`/products/${product.id}`}>{product.name}</Link>
+            <Link to={product.id}>{product.name}</Link>
           </li>
         ))}
       </ul>
